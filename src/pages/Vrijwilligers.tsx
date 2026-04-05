@@ -11,9 +11,18 @@ const volunteers = [
 ];
 
 const vacatures = [
-  { title: "Kookgroep begeleider", desc: "Help mee bij het bereiden van wekelijkse maaltijden. Kookervaring is welkom maar niet verplicht." },
-  { title: "Kledinghoek medewerker", desc: "Sorteer en presenteer gedoneerde kledij. Oog voor kwaliteit en organisatie is een plus." },
-  { title: "Administratieve ondersteuning", desc: "Help bezoekers met het invullen van formulieren en administratieve taken." },
+  { title: "Kookgroep begeleider", desc: "Help mee bij het bereiden van de wekelijkse warme maaltijd op vrijdag. Kookervaring is welkom maar niet verplicht." },
+  { title: "Kledinghoek medewerker", desc: "Sorteer en presenteer gedoneerde kledij op maandag, donderdag en vrijdag van 10u tot 12u." },
+  { title: "Repair Café vrijwilliger", desc: "Help bezoekers met het herstellen van kledij, fietsen of klein elektro tijdens het Repair Café." },
+  { title: "Administratieve ondersteuning", desc: "Help bezoekers met het invullen van formulieren en administratieve taken. Schakelen naar de juiste diensten." },
+];
+
+const werkgroepen = [
+  "Kookgroep",
+  "Kledinghoek",
+  "Repair Café",
+  "Ontmoetingsruimte",
+  "Themawerking",
 ];
 
 const Vrijwilligers = () => (
@@ -23,14 +32,20 @@ const Vrijwilligers = () => (
       <div className="container-narrow">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="rounded-lg overflow-hidden">
-            <img src={volunteersImg} alt="Vrijwilligers" className="w-full h-80 object-cover" loading="lazy" width={800} height={600} />
+            <img src={volunteersImg} alt="Vrijwilligers bij De Keeting" className="w-full h-80 object-cover" loading="lazy" width={800} height={600} />
           </div>
           <div>
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Word Vrijwilliger</h1>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Onze vrijwilligers zijn het kloppend hart van De Keeting. Of je nu veel of weinig
-              tijd hebt, er is altijd een plek voor jou. Samen maken we het verschil.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              De Keeting werkt met een aantal vaste krachten om onze drie pijlers te realiseren,
+              maar steunt ook op vrijwilligers. Er zijn verschillende werkgroepen waar vrijwilligers
+              zich kunnen aansluiten.
             </p>
+            <div className="flex flex-wrap gap-2 mb-6">
+              {werkgroepen.map((w) => (
+                <span key={w} className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">{w}</span>
+              ))}
+            </div>
             <Link to="/contact">
               <Button size="lg">Meld je aan <ArrowRight size={16} /></Button>
             </Link>
@@ -60,7 +75,7 @@ const Vrijwilligers = () => (
               <h3 className="text-xl font-display font-semibold">Rekeningnummer</h3>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-2">
-              Je kan ook rechtstreeks storten op ons rekeningnummer:
+              Giften aan onze organisatie kan steeds op het rekeningnummer van de vzw:
             </p>
             <p className="font-mono font-bold text-foreground text-lg mb-2">BE86 0012 5612 5950</p>
             <p className="text-muted-foreground text-xs">Met vermelding: "Gift De Keeting"</p>
@@ -79,13 +94,13 @@ const Vrijwilligers = () => (
           <div>
             <h2 className="text-2xl font-display font-bold mb-4">Fiscaal Attest</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Indien gewenst kan via onze koepelorganisatie, het Vlaams Netwerk Tegen Armoede,
+              Indien gewenst kan via onze koepelorganisatie, het <strong className="text-foreground">Vlaams Netwerk Tegen Armoede</strong>,
               een fiscaal attest (vanaf €40) worden uitgereikt.
             </p>
             <div className="bg-card rounded-lg border border-border p-4">
               <p className="text-sm text-muted-foreground mb-1">Stort op rekeningnummer:</p>
               <p className="font-mono font-bold text-foreground">BE86 8939 4407 0450</p>
-              <p className="text-xs text-muted-foreground mt-1">Met vermelding: "project 204 - De Keeting"</p>
+              <p className="text-xs text-muted-foreground mt-1">Met vermelding: <strong className="text-foreground">"project 204 - De Keeting"</strong></p>
             </div>
           </div>
         </div>
@@ -99,7 +114,7 @@ const Vrijwilligers = () => (
           <Briefcase className="text-primary" size={28} />
           <h2 className="text-3xl font-display font-bold">Vacatures</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {vacatures.map((v) => (
             <div key={v.title} className="bg-background rounded-lg p-6 border border-border">
               <h3 className="font-display font-semibold text-lg mb-2">{v.title}</h3>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Calendar, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import cookingImg from "@/assets/activity-cooking.jpg";
@@ -10,45 +10,52 @@ import volunteersImg from "@/assets/volunteers.jpg";
 const activities = [
   {
     title: "Kookgroep",
-    desc: "Elke dinsdag koken we samen een heerlijke maaltijd. Iedereen is welkom om mee te helpen of gewoon te komen eten. Een moment van warmte en verbinding.",
+    desc: "Elke vrijdag koken we samen een heerlijke warme maaltijd (€2,50). Iedereen is welkom om mee te helpen of gewoon te komen eten. Inschrijven ten laatste op donderdag voor 13.30u.",
     image: cookingImg,
   },
   {
     title: "Ontmoetingsruimte",
-    desc: "Onze huiskamer staat altijd open. Kom langs voor een kopje koffie, een babbel of gewoon wat gezelschap. Hier is niemand alleen.",
+    desc: "Onze huiskamer staat altijd open op maandag, donderdag en vrijdag. Kom langs voor een kopje koffie of thee, een krant, gratis wifi of gewoon een gezellige babbel. Hier is niemand alleen.",
     image: meetingImg,
   },
   {
-    title: "Repair Café",
-    desc: "Elke eerste zaterdag van de maand repareren we samen kapotte spullen. Van fietsen tot elektronica — onze handige vrijwilligers helpen je graag.",
+    title: "Repair Café Mechelen",
+    desc: "Een gratis bijeenkomst waarbij vrijwilligers en bezoekers elkaar helpen bij het herstellen van allerhande voorwerpen. Drie categorieën: kledij, fietsen en klein elektro. Max 1 herstelling per categorie, binnenbrengen tot 12u.",
     image: repairImg,
   },
   {
     title: "Kledinghoek",
-    desc: "Tweemaal per week openen we onze kledinghoek met kwalitatieve tweedehands kledij voor het hele gezin.",
+    desc: "Open op maandag, donderdag en vrijdag van 10u tot 12u. Elke dag mag je 5 gratis kledingstukken voor volwassenen en kinderen meenemen.",
     image: volunteersImg,
   },
   {
     title: "Themawerking",
-    desc: "Regelmatig organiseren we workshops en infosessies rond thema's als gezondheid, budgetbeheer, digitale vaardigheden en meer.",
+    desc: "Tweejaarlijks gaat een themawerking van start in samenspraak met de bezoekers. Knelpunten worden besproken en er wordt naar beleidsmatige alternatieven gezocht.",
     image: meetingImg,
   },
 ];
 
 const calendarEvents = [
-  { date: "7 apr", title: "Kookgroep", time: "10:00 – 14:00" },
-  { date: "9 apr", title: "Ontmoetingsruimte", time: "13:00 – 17:00" },
-  { date: "12 apr", title: "Repair Café", time: "10:00 – 16:00" },
-  { date: "14 apr", title: "Kookgroep", time: "10:00 – 14:00" },
-  { date: "16 apr", title: "Kledinghoek", time: "9:00 – 12:00" },
-  { date: "21 apr", title: "Themawerking: Budgetbeheer", time: "14:00 – 16:00" },
+  { date: "7 apr", title: "Ontmoetingsruimte + Kledinghoek", time: "10:00 – 12:00" },
+  { date: "10 apr", title: "Ontmoetingsruimte + Broodmaaltijd + Kledinghoek", time: "10:00 – 12:00" },
+  { date: "11 apr", title: "Warme maaltijd + Kookgroep + Kledinghoek", time: "10:00 – 14:00" },
+  { date: "14 apr", title: "Ontmoetingsruimte + Kledinghoek", time: "10:00 – 12:00" },
+  { date: "17 apr", title: "Ontmoetingsruimte + Broodmaaltijd + Kledinghoek", time: "10:00 – 12:00" },
+  { date: "18 apr", title: "Warme maaltijd + Kookgroep + Kledinghoek", time: "10:00 – 14:00" },
+];
+
+const repairCafeRules = [
+  "Slechts 1 herstelling per categorie",
+  "Herstellingen kunnen binnengebracht worden tot 12.00u",
+  "Breng indien mogelijk een wisselstuk mee. Sommige wisselstukken zijn verkrijgbaar tegen aankoopprijs",
+  "We kunnen helaas niet alle herstellingen garanderen",
 ];
 
 const Activiteiten = () => (
   <Layout>
     <section className="section-padding">
       <div className="container-narrow">
-        <h1 className="text-4xl md:text-5xl font-display font-bold text-center mb-4">Activiteiten</h1>
+        <h1 className="text-4xl md:text-5xl font-display font-bold text-center mb-4">Activiteiten & Projecten</h1>
         <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
           Bij De Keeting is er altijd iets te doen. Van samen koken tot spullen repareren — doe mee!
         </p>
@@ -57,7 +64,7 @@ const Activiteiten = () => (
         <div className="bg-card rounded-lg border border-border p-6 mb-16">
           <div className="flex items-center gap-3 mb-6">
             <Calendar className="text-primary" size={24} />
-            <h2 className="text-2xl font-display font-semibold">Kalender – April 2026</h2>
+            <h2 className="text-2xl font-display font-semibold">Activiteitenkalender – April 2026</h2>
           </div>
           <div className="space-y-3">
             {calendarEvents.map((e, i) => (
@@ -74,7 +81,32 @@ const Activiteiten = () => (
           </div>
         </div>
 
+        {/* Repair Café highlight */}
+        <div className="bg-card rounded-lg border border-border p-8 mb-16">
+          <div className="flex items-center gap-3 mb-4">
+            <Wrench className="text-primary" size={24} />
+            <h2 className="text-2xl font-display font-semibold">Repair Café Mechelen</h2>
+          </div>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            Repair Café Mechelen is een <strong className="text-foreground">gratis bijeenkomst</strong>, waarbij vrijwilligers
+            en bezoekers elkaar helpen bij het herstellen van allerhande voorwerpen. Bezoekers kunnen
+            hun kapotte spullen meebrengen en samen met de deskundige vrijwilligers herstellen.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            Er zijn drie categorieën: <strong className="text-foreground">kledij, fietsen en klein elektro</strong>.
+          </p>
+          <ul className="space-y-2">
+            {repairCafeRules.map((rule, i) => (
+              <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                <span className="text-primary font-bold mt-0.5">•</span>
+                {rule}
+              </li>
+            ))}
+          </ul>
+        </div>
+
         {/* Activities grid */}
+        <h2 className="text-2xl font-display font-bold text-center mb-8">Onze Werkgroepen</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {activities.map((a) => (
             <div key={a.title} className="bg-card rounded-lg border border-border overflow-hidden hover:shadow-lg transition-shadow">
