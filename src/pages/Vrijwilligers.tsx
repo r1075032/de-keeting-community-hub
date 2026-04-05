@@ -62,7 +62,7 @@ const Vrijwilligers = () => (
             <p className="text-muted-foreground text-sm leading-relaxed mb-2">
               Je kan ook rechtstreeks storten op ons rekeningnummer:
             </p>
-            <p className="font-mono font-bold text-foreground text-lg mb-2">BE12 3456 7890 1234</p>
+            <p className="font-mono font-bold text-foreground text-lg mb-2">BE86 0012 5612 5950</p>
             <p className="text-muted-foreground text-xs">Met vermelding: "Gift De Keeting"</p>
           </div>
         </div>
@@ -78,11 +78,15 @@ const Vrijwilligers = () => (
           </div>
           <div>
             <h2 className="text-2xl font-display font-bold mb-4">Fiscaal Attest</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Giften vanaf €40 per jaar komen in aanmerking voor een fiscaal attest.
-              Dit betekent dat je een belastingvermindering van 45% kan genieten op je gift.
-              Het attest wordt automatisch aan je bezorgd in het begin van het volgende jaar.
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Indien gewenst kan via onze koepelorganisatie, het Vlaams Netwerk Tegen Armoede,
+              een fiscaal attest (vanaf €40) worden uitgereikt.
             </p>
+            <div className="bg-card rounded-lg border border-border p-4">
+              <p className="text-sm text-muted-foreground mb-1">Stort op rekeningnummer:</p>
+              <p className="font-mono font-bold text-foreground">BE86 8939 4407 0450</p>
+              <p className="text-xs text-muted-foreground mt-1">Met vermelding: "project 204 - De Keeting"</p>
+            </div>
           </div>
         </div>
       </div>
