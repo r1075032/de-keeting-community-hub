@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Heart, Facebook, Mail, MapPin, Clock } from "lucide-react";
+import vlaanderenLogo from "@/assets/vlaanderen-verbeelding-werkt.png";
 
 const Footer = () => (
   <footer className="bg-primary text-primary-foreground">
