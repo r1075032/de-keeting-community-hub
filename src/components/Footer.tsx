@@ -62,11 +62,21 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="border-t border-primary-foreground/20 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-primary-foreground/60">
-        <p>© {new Date().getFullYear()} De Keeting vzw. Alle rechten voorbehouden.</p>
-        <p className="flex items-center gap-1">
-          Gemaakt met <Heart size={12} className="text-secondary" /> voor de gemeenschap
-        </p>
+      <div className="border-t border-primary-foreground/20 mt-12 pt-6 flex flex-col items-center gap-6 text-xs text-primary-foreground/60">
+        <img
+          src={vlaanderenLogo}
+          alt="Vlaanderen Verbeelding Werkt"
+          loading="lazy"
+          width={140}
+          height={140}
+          className="opacity-80"
+        />
+        <div className="flex flex-col sm:flex-row items-center justify-between w-full gap-4">
+          <p>© {new Date().getFullYear()} De Keeting vzw. Alle rechten voorbehouden.</p>
+          <p className="flex items-center gap-1">
+            Gemaakt met <Heart size={12} className="text-secondary" /> voor de gemeenschap
+          </p>
+        </div>
       </div>
     </div>
   </footer>
