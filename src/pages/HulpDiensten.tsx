@@ -74,7 +74,7 @@ const HulpDiensten = () => (
           Met jouw steun kunnen wij nog meer mensen helpen. Elke donatie, groot of klein, maakt een verschil.
         </p>
         <p className="text-secondary-foreground/80 mb-8 text-sm">
-          Rekeningnummer: <strong>BE12 3456 7890 1234</strong>
+          Rekeningnummer: <strong className="text-secondary-foreground">BE86 0012 5612 5950</strong>
         </p>
         <Link to="/doneren">
           <Button variant="default" size="lg">Doneer nu</Button>
@@ -98,7 +98,8 @@ const HulpDiensten = () => (
             </p>
             <p className="text-muted-foreground leading-relaxed">
               We werken samen met OCMW, CAW en andere sociale diensten om je door te verwijzen
-              wanneer je specifieke hulp nodig hebt. Aarzel niet om langs te komen.
+              wanneer je specifieke hulp nodig hebt. Aarzel niet om langs te komen in de
+              Kroonstraat 64-66, 2800 Mechelen of bel ons op 015 27 09 25.
             </p>
           </div>
         </div>

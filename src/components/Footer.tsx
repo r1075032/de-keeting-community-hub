@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Facebook, Mail, MapPin, Clock } from "lucide-react";
+import { Heart, Facebook, Mail, MapPin, Clock, Phone } from "lucide-react";
 import vlaanderenLogo from "@/assets/vlaanderen-verbeelding-werkt.png";
 
 const Footer = () => (
@@ -9,12 +9,13 @@ const Footer = () => (
         <div>
           <h3 className="text-xl font-bold mb-4">De Keeting</h3>
           <p className="text-primary-foreground/80 text-sm leading-relaxed">
-            Een warme plek waar iedereen welkom is. Wij helpen mensen in nood met
+            De Keeting is een erkende vereniging waar armen het woord nemen en
+            basisschakelwerking gelegen in Mechelen. Wij helpen mensen in nood met
             kledij, voeding, praktische hulp en een luisterend oor.
           </p>
           <div className="flex items-center gap-3 mt-4">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/dekeeting"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-secondary transition-colors"
@@ -39,7 +40,9 @@ const Footer = () => (
             <li><Link to="/hulp-diensten" className="hover:text-secondary transition-colors">Hulp & Diensten</Link></li>
             <li><Link to="/activiteiten" className="hover:text-secondary transition-colors">Activiteiten</Link></li>
             <li><Link to="/vrijwilligers" className="hover:text-secondary transition-colors">Vrijwilligers</Link></li>
+            <li><Link to="/verhalen" className="hover:text-secondary transition-colors">Verhalen</Link></li>
             <li><Link to="/doneren" className="hover:text-secondary transition-colors">Doneren</Link></li>
+            <li><Link to="/contact" className="hover:text-secondary transition-colors">Contact & FAQ</Link></li>
           </ul>
         </div>
 
@@ -48,7 +51,11 @@ const Footer = () => (
           <ul className="space-y-3 text-sm text-primary-foreground/80">
             <li className="flex items-start gap-2">
               <MapPin size={16} className="mt-0.5 shrink-0" />
-              <span>Keetingstraat 12, 9000 Gent</span>
+              <span>Kroonstraat 64-66, 2800 Mechelen</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Phone size={16} className="mt-0.5 shrink-0" />
+              <span>015 27 09 25</span>
             </li>
             <li className="flex items-start gap-2">
               <Mail size={16} className="mt-0.5 shrink-0" />

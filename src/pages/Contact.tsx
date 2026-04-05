@@ -12,8 +12,8 @@ const faqs = [
   { q: "Zijn jullie diensten gratis?", a: "De meeste diensten zijn gratis of tegen een symbolische bijdrage. Kledij is beschikbaar tegen een kleine vergoeding." },
   { q: "Kan ik spullen doneren?", a: "Ja! We aanvaarden graag kledij, voeding en andere goederen in goede staat. Breng ze langs tijdens de openingsuren." },
   { q: "Hoe word ik vrijwilliger?", a: "Neem contact met ons op via het formulier of kom langs. We zoeken altijd enthousiaste mensen die willen helpen." },
-  { q: "Geven jullie een fiscaal attest?", a: "Ja, voor giften vanaf €40 per kalenderjaar bezorgen we een fiscaal attest waarmee je 45% belastingvermindering geniet." },
-  { q: "Waar zijn jullie gevestigd?", a: "We zijn gevestigd aan de Keetingstraat 12 in 9000 Gent. Kom gerust langs!" },
+  { q: "Geven jullie een fiscaal attest?", a: "Ja, via onze koepelorganisatie het Vlaams Netwerk Tegen Armoede. Giften vanaf €40 per kalenderjaar komen in aanmerking. Stort op rekeningnummer BE86 8939 4407 0450 met vermelding 'project 204 - De Keeting'." },
+  { q: "Waar zijn jullie gevestigd?", a: "We zijn gevestigd in de Kroonstraat 64-66 te 2800 Mechelen. Kom gerust langs!" },
 ];
 
 const openingsuren = [
@@ -91,15 +91,15 @@ const Contact = () => {
                 <ul className="space-y-4 text-sm">
                   <li className="flex items-start gap-3">
                     <MapPin className="text-primary mt-0.5 shrink-0" size={18} />
-                    <span>Keetingstraat 12, 9000 Gent</span>
+                    <span>Kroonstraat 64-66, 2800 Mechelen</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Phone className="text-primary mt-0.5 shrink-0" size={18} />
+                    <span>015 27 09 25</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Mail className="text-primary mt-0.5 shrink-0" size={18} />
                     <span>info@dekeeting.be</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Phone className="text-primary mt-0.5 shrink-0" size={18} />
-                    <span>09 123 45 67</span>
                   </li>
                 </ul>
               </div>
@@ -123,9 +123,18 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Map placeholder */}
-              <div className="rounded-lg border border-border bg-muted h-48 flex items-center justify-center">
-                <p className="text-muted-foreground text-sm">Kaart — Keetingstraat 12, 9000 Gent</p>
+              {/* Google Maps embed */}
+              <div className="rounded-lg border border-border overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1246.8!2d4.4720786!3d51.025208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3e5c5cf682049%3A0xdbe52e405e18bd8e!2sKroonstraat%2066%2C%202800%20Mechelen!5e0!3m2!1snl!2sbe!4v1700000000000!5m2!1snl!2sbe"
+                  width="100%"
+                  height="200"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Locatie De Keeting - Kroonstraat 64-66, 2800 Mechelen"
+                />
               </div>
             </div>
           </div>

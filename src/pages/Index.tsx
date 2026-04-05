@@ -37,8 +37,8 @@ const Index = () => (
           Samen maken we het verschil
         </h1>
         <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed">
-          De Keeting is een warme ontmoetingsplaats waar iedereen welkom is.
-          Wij bieden hulp, verbinding en hoop aan wie het nodig heeft.
+          De Keeting is een erkende vereniging waar armen het woord nemen en
+          basisschakelwerking in Mechelen. Een warme ontmoetingsplaats waar iedereen welkom is.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/vrijwilligers">
@@ -79,7 +79,7 @@ const Index = () => (
     <section className="bg-primary/5 py-12">
       <div className="container-narrow text-center px-4">
         <a
-          href="https://facebook.com"
+          href="https://www.facebook.com/dekeeting"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 bg-card border border-border rounded-lg px-8 py-4 hover:shadow-md transition-shadow"
@@ -99,8 +99,9 @@ const Index = () => (
       <div className="container-narrow max-w-3xl text-center">
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Onze Missie</h2>
         <p className="text-muted-foreground text-lg leading-relaxed">
-          De Keeting vzw is een sociale organisatie die mensen in armoede en kwetsbare situaties
-          ondersteunt. Wij geloven in de kracht van gemeenschap en solidariteit. Door het aanbieden
+          De Keeting vzw is een erkende vereniging waar armen het woord nemen en
+          basisschakelwerking gelegen in de Kroonstraat 64-66 te 2800 Mechelen.
+          Wij geloven in de kracht van gemeenschap en solidariteit. Door het aanbieden
           van kledij, voeding, praktische hulp en een luisterend oor willen wij iedereen de kans geven
           op een waardig bestaan. Samen bouwen we aan een warmere samenleving.
         </p>
@@ -135,7 +136,7 @@ const Index = () => (
       <div className="container-narrow text-center px-4">
         <h2 className="text-3xl font-display font-bold mb-4">Heb je een vraag?</h2>
         <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto">
-          Neem gerust contact met ons op. We helpen je graag verder.
+          Neem gerust contact met ons op. Bel ons op 015 27 09 25 of stuur een mail naar info@dekeeting.be.
         </p>
         <Link to="/contact">
           <Button variant="hero" size="lg">Contacteer ons</Button>
@@ -172,9 +173,12 @@ const Index = () => (
       <div className="container-narrow text-center px-4">
         <Heart className="mx-auto mb-6" size={48} />
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Steun De Keeting</h2>
-        <p className="text-secondary-foreground/90 max-w-xl mx-auto mb-8 text-lg">
+        <p className="text-secondary-foreground/90 max-w-xl mx-auto mb-4 text-lg">
           Elke bijdrage telt. Met jouw donatie kunnen wij meer mensen helpen
           en onze werking verder uitbouwen.
+        </p>
+        <p className="text-secondary-foreground/70 mb-8 text-sm">
+          Rekeningnummer: <strong className="text-secondary-foreground">BE86 0012 5612 5950</strong>
         </p>
         <Link to="/doneren">
           <Button variant="default" size="lg">Doneer nu</Button>
